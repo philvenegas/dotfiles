@@ -1,3 +1,6 @@
+# http://blog.toddwerth.com/
+# https://github.com/akitaonrails/vimfiles
+
 if [[ $- == *i* ]] ; then
   export IS_INTERACTIVE=true
 else
@@ -9,8 +12,6 @@ if [[ -z $SSH_CONNECTION ]]; then
 else
   export IS_REMOTE=true
 fi
-
-
 
 # Colors ----------------------------------------------------------
 export TERM=xterm-color
@@ -43,9 +44,18 @@ export COLOR_BROWN='\033[0;33m'
 export COLOR_YELLOW='\033[1;33m'
 export COLOR_GRAY='\033[1;30m'
 export COLOR_LIGHT_GRAY='\033[0;37m'
+# export COLOR_BACKGROUND="\033[1;30;40m"
+
+  export BGK="\[\033[40m\]"
+  # local BGR="\[\033[41m\]"
+  # local BGG="\[\033[42m\]"
+  # local BGY="\[\033[43m\]"
+  # local BGB="\[\033[44m\]"
+  # local BGM="\[\033[45m\]"
+  # local BGC="\[\033[46m\]"
+  # local BGW="\[\033[47m\]"
+
 alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
-
-
 
 # History ----------------------------------------------------------
 export HISTCONTROL=ignoredups
@@ -86,9 +96,12 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
   fi
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
 
   # git completion
-  source ~/cl/bin/git-completion.bash
+  source ~/Code/dotfiles/bin/git-completion.bash
 
   # Add completion to source and .
   complete -F _command source 
@@ -103,19 +116,49 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
 
   prompt_func() {
       previous_return_value=$?;
+      
+      case $TERM in
+          xterm*)
+          TITLEBAR='\[\033]0;\u@\h: \w - \d\007\]'
+          ;;
+          *)
+          TITLEBAR=""
+          ;;
+      esac
+      
       if [ $IS_REMOTE = 'true' ] ; then
         prompt="\[\033]0;${USER} ${PWD}\007\]\[${COLOR_PURPLE}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
       else
-        prompt="\[\033]0;${USER} ${PWD}\007\]\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
+        #prompt="\[\033]0;${USER} ${PWD}\007\]\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
+        
+prompt="${TITLEBAR}${BGK}
+\[${COLOR_WHITE}\] \
+\w\
+\[${COLOR_YELLOW}\]\
+"'$(__git_ps1 "[%s]")'"\
+\[${COLOR_GRAY}\] \
+@\
+\[${COLOR_YELLOW}\] \
+\h\
+\[${COLOR_GRAY}\] \
+(\u) -\
+\[${COLOR_WHITE}\] \
+\@\
+\[${COLOR_LIGHT_GREEN}\]${BGK} \
+"'$(~/.rvm/bin/rvm-prompt)'"\
+\[${COLOR_NC}\]"
+
       fi
       #prompt="\033]0;${PWD}\007\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
       #prompt="\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_YELLOW}\]$(git_dirty_flag)\[${COLOR_NC}\] "
 
       if test $previous_return_value -eq 0
       then
-          PS1="${prompt}> "
+          # PS1="${prompt}> "
+          PS1="${prompt}\n\[${COLOR_WHITE}\] > \[${COLOR_NC}\]"
       else
-          PS1="${prompt}\[${COLOR_RED}\]> \[${COLOR_NC}\]"
+          # PS1="${prompt}\[${COLOR_RED}\]> \[${COLOR_NC}\]"
+          PS1="${prompt}\n\[${COLOR_WHITE}\] > \[${COLOR_NC}\]"
       fi
   }
   PROMPT_COMMAND=prompt_func
@@ -190,7 +233,20 @@ fi
 # this might work just the same (not tested)
 # chmod -R g+rwXs,o-rwx,u+rwX /foo
 
-
+# Files/directory size ordered by size in current directory
+filesize () {
+  du -sh .* * | perl -e'
+  @l{ K, M, G } = ( 1 .. 3 );
+  print splice @{
+      [
+          sort {
+              ($aa) = $a =~ /(\w)\s+/;
+              ($bb) = $b =~ /(\w)\s+/;
+              $l{$aa} <=> $l{$bb} || $a <=> $b
+            } <>
+      ]
+    }'
+}
 
 # Sluething----------------------------------------------------
 findportuser() {
@@ -208,6 +264,12 @@ monitor_traffic(){
 alias ll='ls -hl'
 alias la='ls -a'
 alias lla='ls -lah'
+alias wget="curl -O"
+alias tower='gittower'
+alias code='cd ~/Code'
+alias ticketee='cd ~/Code/philvenegas/ticketee'
+alias box='cd ~/Dropbox'
+
 
 # Search
 # Use ack for grepping and find if ack is available
@@ -234,7 +296,7 @@ fi
 
 
 # Misc
-alias reloadbash='source ~/cl/etc/bash_profile'
+alias reloadbash='source ~/Code/dotfiles/etc/bash_profile'
 
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias m='more'
@@ -273,16 +335,15 @@ killhard() {
 if [ $IS_INTERACTIVE = 'true' ] ; then
   source ~/.bashrc_help
 
-  source ~/cl/bin/mq/mq.sh # MySQL tools
-  source ~/cl/bin/rr/rr.sh # Rails tools
-  source ~/cl/bin/gt/gt.sh # Git tools
-  source ~/cl/bin/sv/sv.sh # SVN tools
+  source ~/Code/dotfiles/bin/mq/mq.sh # MySQL tools
+  source ~/Code/dotfiles/bin/rr/rr.sh # Rails tools
+  source ~/Code/dotfiles/bin/gt/gt.sh # Git tools
+  # source ~/Code/dotfiles/bin/sv/sv.sh # SVN tools
 fi
 
 if [ -f ~/.bashrc_local ]; then
   source ~/.bashrc_local
 fi
-
 
 
 # Test ------------------------------------------------------------------------ 

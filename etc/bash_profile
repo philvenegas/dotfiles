@@ -11,29 +11,41 @@ export PLATFORM="$MACHINE-$OS-$OSVERSION"
 
 # Path ------------------------------------------------------------
 if [ "$OS" = "darwin" ] ; then
-  export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts and MySQL installed
+  #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts and MySQL installed
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts installed
+  export MYSQL_BIN=/usr/local/mysql/bin
+  export PGSQL_BIN=/usr/local/pgsql/bin
+  export GIT_BIN=/usr/local/git/bin
+  export NODE_BIN=/usr/local/node/bin
+  export RVM_BIN=$HOME/.rvm/bin
+  export PATH=$GIT_BIN:$MYSQL_BIN:$PGSQL_BIN:$NODE_BIN:$RVM_BIN:$PATH
 fi
 
 if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH  # add your bin folder to the path, if you have it.  It's a good place to add all your scripts
 fi
 
-if [ -d ~/cl/bin ]; then
-	export PATH=~/cl/bin:$PATH  # add your bin folder to the path, if you have it
+if [ -d ~/Code/dotfiles/bin ]; then
+	export PATH=~/Code/dotfiles/bin:$PATH  # add your bin folder to the path, if you have it
 fi
-
 
 
 # Load in .bashrc -------------------------------------------------
 source ~/.bashrc
 
 # Hello Messsage --------------------------------------------------
-echo -e "Kernel Information: " `uname -smr`
-echo -e "`bash --version`"
-echo -ne "Uptime: "; uptime
-echo -ne "Server time is: "; date
+echo
+# \[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\]
+echo -e "${COLOR_GREEN}Kernel Information:${COLOR_NC}" `uname -smr`
+#echo -e "`bash --version`"
+echo -ne "${COLOR_GREEN}Uptime: ${COLOR_NC}"; uptime
+echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 
+echo 
+rvm use 1.9.2
+
+[[ -r "$HOME/.rvm/scripts/completion" ]] && . "$HOME/.rvm/scripts/completion"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 
 # Notes: ----------------------------------------------------------

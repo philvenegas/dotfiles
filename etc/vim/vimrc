@@ -1,6 +1,9 @@
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
+" |                                                                           |
+" | https://github.com/twerth/dotfiles/blob/master/etc/vim/vimrc              |
+" | https://github.com/akitaonrails/vimfiles                                  |
 " |                                                                           |
 " | Some highlights:                                                          |
 " |   jj = <esc>  Very useful for keeping your hands on the home row          |
@@ -91,7 +94,7 @@ set smartcase " Ignore case when searching lowercase
 
 " Colors **********************************************************************
 "set t_Co=256 " 256 colors
-set background=dark 
+set background=dark
 syntax on " syntax highlighting
 colorscheme ir_black
 
@@ -100,7 +103,7 @@ colorscheme ir_black
 set showcmd
 set ruler " Show ruler
 "set ch=2 " Make command line two lines high
-match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
+"match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
 
 
 " Line Wrapping ***************************************************************
@@ -169,7 +172,7 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
-map <Leader>p <C-^> " Go to previous file
+"map <Leader>p <C-^> " Go to previous file
 
 
 " Ruby stuff ******************************************************************
@@ -224,7 +227,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
 
 " CommandT ********************************************************
   " To compile:
-  " cd ~/cl/etc/vim/ruby/command-t
+  " cd ~/Code/dotfiles/etc/vim/ruby/command-t
   " ruby extconf.rb
   " make
 let g:CommandTMatchWindowAtTop = 1

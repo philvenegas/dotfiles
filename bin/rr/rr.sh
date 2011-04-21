@@ -45,7 +45,7 @@ rrgenerate(){
 alias rrrakelist='rake -T | g ":"'
 alias rrrakefind='rake -T | g '
 #alias rrake=rake
-#complete -C ~/cl/bin/rr/rake-completion.rb -o default rake rrrake
+#complete -C ~/Code/dotfiles/bin/rr/rake-completion.rb -o default rake rrrake
 
 rrtest(){
   date
