@@ -67,12 +67,10 @@ hf(){
   grep "$@" ~/.bash_history
 }
 
-
-
 if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
 
   # Input stuff -------------------------------------------------------
-  bind "set completion-ignore-case on" # note: bind used instead of sticking these in .inputrc
+  bind "set completion-ignore-case off" # note: bind used instead of sticking these in .inputrc
   bind "set show-all-if-ambiguous On" # show list automatically, without double tab
   bind "set bell-style none" # no bell
 
@@ -82,8 +80,6 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   #bind -m vi-command -r 'v'
 
   shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
-
-
 
   # Completion -------------------------------------------------------
 
@@ -106,8 +102,6 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   # Add completion to source and .
   complete -F _command source 
   complete -F _command .
-
-
 
   # Prompts ----------------------------------------------------------
   #git_dirty_flag() {
@@ -181,8 +175,6 @@ prompt="${TITLEBAR}${BGK}
 
 fi
 
-
-
 # Navigation -------------------------------------------------------
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
@@ -204,8 +196,6 @@ save (){
 source ~/.dirs  # Initialization for the above 'save' facility: source the .sdirs file 
 shopt -s cdable_vars # set the bash option so that no '$' is required when using the above facility
 
-
-
 # Editors ----------------------------------------------------------
 #export EDITOR='mate -w'  # OS-X SPECIFIC - TextMate, w is to wait for TextMate window to close
 #export EDITOR='gedit'  #Linux/gnome
@@ -220,8 +210,6 @@ if [ "$OS" = "darwin" ] ; then
 else
   alias v=vim
 fi
-
-
 
 # Security ---------------------------------------------------------
 
@@ -258,8 +246,6 @@ monitor_traffic(){
   sudo ngrep -W byline -qld en1 "$1" 
 }
 
-
-
 # Other aliases ----------------------------------------------------
 alias ll='ls -hl'
 alias la='ls -a'
@@ -269,7 +255,6 @@ alias tower='gittower'
 alias code='cd ~/Code'
 alias ticketee='cd ~/Code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
-
 
 # Search
 # Use ack for grepping and find if ack is available
@@ -292,8 +277,6 @@ else
     find . -iname "$1"
   }
 fi
-
-
 
 # Misc
 alias reloadbash='source ~/Code/dotfiles/etc/bash_profile'
@@ -329,8 +312,6 @@ killhard() {
     kill -9 "$1"
 }
 
-
-
 # Bring in the other files ----------------------------------------------------
 if [ $IS_INTERACTIVE = 'true' ] ; then
   source ~/.bashrc_help
@@ -344,7 +325,6 @@ fi
 if [ -f ~/.bashrc_local ]; then
   source ~/.bashrc_local
 fi
-
 
 # Test ------------------------------------------------------------------------ 
 

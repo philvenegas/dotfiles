@@ -33,6 +33,8 @@ else
   # misc
   link ~/Code/dotfiles/etc/autotest ~/.autotest
   link ~/Code/dotfiles/etc/irbrc ~/.irbrc
+  link ~/Code/dotfiles/etc/rvmrc ~/.rvmrc
+  link ~/Code/dotfiles/etc/gemrc ~/.gemrc
   link ~/Dropbox/mac_env/dot_ssh/config ~/.ssh/config
 
   source ~/.bash_profile
