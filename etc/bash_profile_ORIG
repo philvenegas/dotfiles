@@ -1,14 +1,14 @@
 # RAILS 3
 # function 3rails
 # {
-#   cd ~/Code/rails3
+#   cd ~/code/rails3
 #   rvm use 1.9.2-p180@rails3
 # }
 # function rto
 # {
 #   # set .rvmrc as: rvm use ruby-1.8.6-p420@rails232 --create
 #   echo "rvm use ruby-1.8.6-p420@rails232"
-#   cd ~/Code/rto/RTO/project1/
+#   cd ~/code/rto/RTO/project1/
 # }
 
 function filesize () {
@@ -45,7 +45,7 @@ alias ngnixstop='sudo /usr/local/nginx/sbin/nginx -s stop'
 alias migrate='rake db:migrate && rake db:test:prepare'
 alias tower='gittower'
 alias code='cd ~/Code'
-alias ticketee='cd ~/Code/philvenegas/ticketee'
+alias ticketee='cd ~/code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
 
 ####

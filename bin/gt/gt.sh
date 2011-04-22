@@ -100,4 +100,4 @@ gtgrep(){
   gt grep -n --ignore-case -e "$@" | highlight green "$@" blue "^.*\:"
 }
 
-complete -C ~/Code/dotfiles/bin/gt/complete_branch_list.rb -o default gtcheckout gtpushorigin
+complete -C ~/code/dotfiles/bin/gt/complete_branch_list.rb -o default gtcheckout gtpushorigin

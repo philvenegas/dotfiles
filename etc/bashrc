@@ -97,7 +97,7 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   fi
 
   # git completion
-  source ~/Code/dotfiles/bin/git-completion.bash
+  source ~/code/dotfiles/bin/git-completion.bash
 
   # Add completion to source and .
   complete -F _command source 
@@ -253,7 +253,7 @@ alias lla='ls -lah'
 alias wget="curl -O"
 alias tower='gittower'
 alias code='cd ~/Code'
-alias ticketee='cd ~/Code/philvenegas/ticketee'
+alias ticketee='cd ~/code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
 
 # Search
@@ -279,7 +279,7 @@ else
 fi
 
 # Misc
-alias reloadbash='source ~/Code/dotfiles/etc/bash_profile'
+alias reloadbash='source ~/code/dotfiles/etc/bash_profile'
 
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias m='more'
@@ -316,10 +316,10 @@ killhard() {
 if [ $IS_INTERACTIVE = 'true' ] ; then
   source ~/.bashrc_help
 
-  source ~/Code/dotfiles/bin/mq/mq.sh # MySQL tools
-  source ~/Code/dotfiles/bin/rr/rr.sh # Rails tools
-  source ~/Code/dotfiles/bin/gt/gt.sh # Git tools
-  # source ~/Code/dotfiles/bin/sv/sv.sh # SVN tools
+  source ~/code/dotfiles/bin/mq/mq.sh # MySQL tools
+  source ~/code/dotfiles/bin/rr/rr.sh # Rails tools
+  source ~/code/dotfiles/bin/gt/gt.sh # Git tools
+  # source ~/code/dotfiles/bin/sv/sv.sh # SVN tools
 fi
 
 if [ -f ~/.bashrc_local ]; then

@@ -23,8 +23,8 @@ if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH  # add your bin folder to the path, if you have it.  It's a good place to add all your scripts
 fi
 
-if [ -d ~/Code/dotfiles/bin ]; then
-	export PATH=~/Code/dotfiles/bin:$PATH  # add your bin folder to the path, if you have it
+if [ -d ~/code/dotfiles/bin ]; then
+	export PATH=~/code/dotfiles/bin:$PATH  # add your bin folder to the path, if you have it
 fi
 
 # Load in .bashrc -------------------------------------------------

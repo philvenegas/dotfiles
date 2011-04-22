@@ -227,7 +227,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
 
 " CommandT ********************************************************
   " To compile:
-  " cd ~/Code/dotfiles/etc/vim/ruby/command-t
+  " cd ~/code/dotfiles/etc/vim/ruby/command-t
   " ruby extconf.rb
   " make
 let g:CommandTMatchWindowAtTop = 1

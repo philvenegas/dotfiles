@@ -15,26 +15,26 @@ else
   }
 
   # bash
-  link ~/Code/dotfiles/etc/bash_profile ~/.bash_profile
-  link ~/Code/dotfiles/etc/bashrc ~/.bashrc
-  link ~/Code/dotfiles/etc/bashrc_help ~/.bashrc_help
-  link ~/Code/dotfiles/etc/bashrc_app_specific ~/.bashrc_app_specific
+  link ~/code/dotfiles/etc/bash_profile ~/.bash_profile
+  link ~/code/dotfiles/etc/bashrc ~/.bashrc
+  link ~/code/dotfiles/etc/bashrc_help ~/.bashrc_help
+  link ~/code/dotfiles/etc/bashrc_app_specific ~/.bashrc_app_specific
 
   # vim
-  link ~/Code/dotfiles/etc/vim/vimrc ~/.vimrc
-  link ~/Code/dotfiles/etc/vim/gvimrc ~/.gvimrc
-  link ~/Code/dotfiles/etc/vim ~/.vim
+  link ~/code/dotfiles/etc/vim/vimrc ~/.vimrc
+  link ~/code/dotfiles/etc/vim/gvimrc ~/.gvimrc
+  link ~/code/dotfiles/etc/vim ~/.vim
 
   # git
   link ~/Dropbox/mac_env/gitconfig ~/.gitconfig
-  link ~/Code/dotfiles/etc/gitignore ~/.gitignore
-  link ~/Code/dotfiles/etc/gitattributes ~/.gitattributes
+  link ~/code/dotfiles/etc/gitignore ~/.gitignore
+  link ~/code/dotfiles/etc/gitattributes ~/.gitattributes
 
   # misc
-  link ~/Code/dotfiles/etc/autotest ~/.autotest
-  link ~/Code/dotfiles/etc/irbrc ~/.irbrc
-  link ~/Code/dotfiles/etc/rvmrc ~/.rvmrc
-  link ~/Code/dotfiles/etc/gemrc ~/.gemrc
+  link ~/code/dotfiles/etc/autotest ~/.autotest
+  link ~/code/dotfiles/etc/irbrc ~/.irbrc
+  link ~/code/dotfiles/etc/rvmrc ~/.rvmrc
+  link ~/code/dotfiles/etc/gemrc ~/.gemrc
   link ~/Dropbox/mac_env/dot_ssh/config ~/.ssh/config
 
   source ~/.bash_profile
