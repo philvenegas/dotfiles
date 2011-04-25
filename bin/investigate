@@ -14,21 +14,21 @@ f(){
 }
 
 echo
-echo "Investigating: $1" | highlight purple "^.*:"
+echo "Investigating: $1" | highlight green "^.*:"
 
 echo
-echo "Located in these files ------------------------------------------------------------------------------" | highlight purple ".*"
+echo "Located in these files ------------------------------------------------------------------------------" | highlight fawn ".*"
 gw "$1" --files-with-matches --count | highlight blue ".*/" red ":.*"
 
 echo
-echo "Set here --------------------------------------------------------------------------------------------" | highlight purple ".*"
+echo "Set here --------------------------------------------------------------------------------------------" | highlight fawn ".*"
 g "^\s*@?$1\s*="
 
 echo
-echo "Defined here ----------------------------------------------------------------------------------------" | highlight purple ".*" 
+echo "Defined here ----------------------------------------------------------------------------------------" | highlight fawn ".*" 
 g "^\s*def\s+$1\s+" --nogroup # where is it defined in ruby
 g "^\s*$1\s*:\s*function\(.*\){" --nogroup # where is it defined in javascript
 
 echo
-echo "For more detail, use: g '$1'" | highlight purple "^.*:" 
+echo "For more detail, use: g '$1'" | highlight green "^.*:" 
 echo

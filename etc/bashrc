@@ -246,13 +246,17 @@ monitor_traffic(){
   sudo ngrep -W byline -qld en1 "$1" 
 }
 
+show_brew_help() {
+  echo "https://github.com/mxcl/homebrew/wiki/The-brew-command"
+}
+
 # Other aliases ----------------------------------------------------
 alias ll='ls -hl'
 alias la='ls -a'
 alias lla='ls -lah'
 alias wget="curl -O"
 alias tower='gittower'
-alias code='cd ~/Code'
+alias code='cd ~/code'
 alias ticketee='cd ~/code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
 

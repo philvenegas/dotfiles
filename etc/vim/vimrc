@@ -148,6 +148,9 @@ set nolist
 
 
 " Mouse ***********************************************************************
+if has("mouse")
+    set mouse=a
+endif
 "set mouse=a " Enable the mouse
 "behave xterm
 "set selectmode=mouse

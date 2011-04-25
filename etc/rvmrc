@@ -1,4 +1,4 @@
 export rvm_path="/Users/fvenegas/.rvm"                                                                                                                                
 export rvm_archflags="-arch x86_64"
-export rvm_project_rvmrc=1
+#export rvm_project_rvmrc=1
 export rvm_pretty_print_flag=1

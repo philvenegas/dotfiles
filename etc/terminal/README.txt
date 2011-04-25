@@ -15,6 +15,9 @@ TerminalTabSwitching.bundle
 http://visor.binaryage.com/
 Visor.bundle
 
+http://bitheap.org/mouseterm/
+MouseTerm
+
 3. Install all *.terminal for customised colours
 
 4. Modify ~/.profile to include the following line:

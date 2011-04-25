@@ -9,11 +9,13 @@ h2. File and directory structure
 I store all my command-line files in a folder (cl), then under that folder there are 3 sub-folders (cl/bin cl/etc cl/doc), to keep them organized away from all my other files.  I link (etc/link) the dot files to the root of my home folder, so I prefer to store them without the . (gitignore rather than .gitignore), then I add the dot in the link.  So if you use one, make sure you put the dot back.
 
   * ~
-  ** cl
-  *** bin
-  *** docs
-  *** etc
-  **** vim
+  ** code
+  *** dotfiles
+  **** bin
+  **** docs
+  **** etc
+  ***** vim
+  ***** terminal
           
 h2. Warning
 
@@ -22,3 +24,27 @@ I mod these all the time, and sometimes I break stuff.  Also, my main platforms 
 h2. More information
 
 "InfiniteRed":http://blog.infinitered.com/entries/show/9
+
+install the following: 
+
+- xcode
+- homebrew (https://github.com/mxcl/homebrew)
+
+(ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)")
+cd /usr/local/
+git remote add origin git://github.com/mxcl/homebrew.git
+git fetch origin 
+git reset --hard origin/master
+brew update
+
+- git
+
+brew install git
+
+- ack
+
+brew install ack
+
+- pow
+
+curl get.pow.cx | sh   # http://pow.cx/ - https://github.com/37signals/pow
