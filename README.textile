@@ -28,23 +28,26 @@ h2. More information
 install the following: 
 
 - xcode
-- homebrew (https://github.com/mxcl/homebrew)
+- "homebrew":http://mxcl.github.com/homebrew/ - "https://github.com/mxcl/homebrew":https://github.com/mxcl/homebrew
 
+<pre>
 (ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)")
+
 cd /usr/local/
 git remote add origin git://github.com/mxcl/homebrew.git
 git fetch origin 
 git reset --hard origin/master
 brew update
+</pre>
 
 - git
 
-brew install git
+<pre>brew install git</pre>
 
 - ack
 
-brew install ack
+<pre>brew install ack</pre>
 
-- pow
+- "pow":http://pow.cx/ - "https://github.com/37signals/pow":https://github.com/37signals/pow
 
-curl get.pow.cx | sh   # http://pow.cx/ - https://github.com/37signals/pow
+<pre>curl get.pow.cx | sh </pre>
