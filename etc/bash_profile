@@ -12,11 +12,8 @@ if [ "$OS" = "darwin" ] ; then
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts and MySQL installed
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts installed
   export MYSQL_BIN=/usr/local/mysql/bin
-  export PGSQL_BIN=/usr/local/pgsql/bin
-  export GIT_BIN=/usr/local/git/bin
-  export NODE_BIN=/usr/local/node/bin
   export RVM_BIN=$HOME/.rvm/bin
-  export PATH=$GIT_BIN:$MYSQL_BIN:$PGSQL_BIN:$NODE_BIN:$RVM_BIN:$PATH
+  export PATH=$MYSQL_BIN:$RVM_BIN:$PATH
 fi
 
 if [ -d ~/bin ]; then

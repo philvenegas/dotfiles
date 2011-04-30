@@ -36,6 +36,10 @@ else
   link ~/code/dotfiles/etc/rvmrc ~/.rvmrc
   link ~/code/dotfiles/etc/gemrc ~/.gemrc
   link ~/Dropbox/mac_env/dot_ssh/config ~/.ssh/config
+  if [ ! -d ~/.bundle ]; then
+    mkdir ~/.bundle
+  fi
+  link ~/code/dotfiles/etc/bundle_config ~/.bundle/config
 
   source ~/.bash_profile
 

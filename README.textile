@@ -23,7 +23,7 @@ I mod these all the time, and sometimes I break stuff.  Also, my main platforms 
 
 h2. More information
 
-"InfiniteRed":http://blog.infinitered.com/entries/show/9
+<!-- "InfiniteRed":http://blog.infinitered.com/entries/show/9 -->
 
 install the following: 
 
@@ -37,8 +37,11 @@ cd /usr/local/
 git remote add origin git://github.com/mxcl/homebrew.git
 git fetch origin 
 git reset --hard origin/master
+
 brew update
 </pre>
+
+Update 'sudo vi /etc/paths' to have /usr/local/bin as the top line (currently last)
 
 - git
 

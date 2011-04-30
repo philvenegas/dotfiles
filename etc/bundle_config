@@ -1,0 +1,5 @@
+# http://gembundler.com/rationale.html
+# ~/.bundle/config 
+
+bundle config build.pg --with-pg-config=/usr/local/bin/pg_config --no-rdoc --no-ri
+bundle config build.mysql --with-mysql-config=/usr/local/bin/mysql_config --no-rdoc --no-ri
