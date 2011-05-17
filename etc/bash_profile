@@ -35,12 +35,11 @@ echo -e "${COLOR_GREEN}Kernel Information:${COLOR_NC}" `uname -smr`
 echo -ne "${COLOR_GREEN}Uptime: ${COLOR_NC}"; uptime
 echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 
-echo 
-rvm use 1.9.2
-
 [[ -r "$HOME/.rvm/scripts/completion" ]] && . "$HOME/.rvm/scripts/completion"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+echo
+rvm use 1.9.2
 
 # Notes: ----------------------------------------------------------
 # When you start an interactive shell (log in, open terminal or iTerm in OS X, 
