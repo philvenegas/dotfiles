@@ -26,7 +26,7 @@ else
   link ~/code/dotfiles/etc/vim ~/.vim
 
   # git
-  link ~/Dropbox/mac_env/gitconfig ~/.gitconfig
+  link ~/code/dotfiles/etc/gitconfig ~/.gitconfig
   link ~/code/dotfiles/etc/gitignore ~/.gitignore
   link ~/code/dotfiles/etc/gitattributes ~/.gitattributes
 
@@ -35,7 +35,7 @@ else
   link ~/code/dotfiles/etc/irbrc ~/.irbrc
   link ~/code/dotfiles/etc/rvmrc ~/.rvmrc
   link ~/code/dotfiles/etc/gemrc ~/.gemrc
-  link ~/Dropbox/mac_env/dot_ssh/config ~/.ssh/config
+#  link ~/Dropbox/mac_env/dot_ssh/config ~/.ssh/config
   if [ ! -d ~/.bundle ]; then
     mkdir ~/.bundle
   fi
