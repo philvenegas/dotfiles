@@ -54,3 +54,27 @@ Update 'sudo vi /etc/paths' to have /usr/local/bin as the top line (currently la
 - "pow":http://pow.cx/ - "https://github.com/37signals/pow":https://github.com/37signals/pow
 
 <pre>curl get.pow.cx | sh </pre>
+
+- "To set the default kernel on startup as 64 bit":http://macperformanceguide.com/SnowLeopard-64bit.html
+
+vi /Library/Preferences/SystemConfiguration/com.apple.Boot.plist
+
+from:
+<pre>
+  <key>Kernel Flags</key>
+  <string></string>
+</pre>
+
+to:
+<pre>
+  <key>Kernel Flags</key>
+  <string>arch=x86_64</string>
+</pre>
+
+- To load the mac into 64 bit kernel
+
+press 6 and 4 at the same time during gray screen boot startup
+
+- For 32 bit kernel
+
+press 3 and 2 at the same time during gray screen boot startup

@@ -7,7 +7,7 @@ Updates can be found at: http://www.culater.net/software/SIMBL/SIMBL.php
 2. Install copy following files to ~/Library/Application Support/SIMBL/Plugins:
 
 http://github.com/timmfin/terminalcolours/raw/master/TerminalColours-SL-64bit.zip
-TerminalColours-SL-64bit.zip
+TerminalColours-SL-64bit.bundle
 
 https://github.com/dabeeeenster/TerminalTabSwitching
 TerminalTabSwitching.bundle
