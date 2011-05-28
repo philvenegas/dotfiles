@@ -7,7 +7,7 @@
 " |                                                                           |
 " | Some highlights:                                                          |
 " |   jj = <esc>  Very useful for keeping your hands on the home row          |
-" |   ,n = toggle NERDTree off and on                                         |
+" |   Command ] = toggle NERDTree off and on                                         |
 " |                                                                           |
 " |   ,f = fuzzy find all files                                               |
 " |   ,b = fuzzy find in all buffers                                          |
@@ -135,6 +135,12 @@ map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
 map <Enter> o<ESC>
 "set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 
+" Shortcut for editing vimrc file in a new tab
+nmap <Leader>ev :tabedit $MYVIMRC<CR>
+
+" Faster shortcut for commenting. Requires T-Comment plugin
+" map <Leader>c <c-_><c-_>
+map <D-/> <c-_><c-_>
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
@@ -206,7 +212,8 @@ imap aa @
 " -----------------------------------------------------------------------------  
 
 " NERDTree ********************************************************************
-:noremap <Leader>n :NERDTreeToggle<CR>
+" :noremap <Leader>d :NERDTreeToggle<CR>
+:map <D-]> :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
 let NERDTreeMouseMode=1 " Single click for everything
 
@@ -217,7 +224,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
 " Toggle commenting on 1 line or all selected lines. Wether to comment or not
 " is decided based on the first line; if it's not commented then all lines
 " will be commented
-:map <Leader>c :call NERDComment(0, "toggle")<CR> 
+":map <Leader>c :call NERDComment(0, "toggle")<CR> 
 
 
 " SnippetsEmu *****************************************************************
@@ -279,9 +286,7 @@ map <Leader>rs :RS<CR>
 " |                               Startup                                     |
 " -----------------------------------------------------------------------------  
 " Open NERDTree on start
-"autocmd VimEnter * exe 'NERDTree' | wincmd l 
-
-
+autocmd VimEnter * exe 'NERDTree' | wincmd l 
 
 " -----------------------------------------------------------------------------  
 " |                               Host specific                               |
