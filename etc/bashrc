@@ -285,6 +285,11 @@ alias tower='gittower'
 alias code='cd ~/code'
 alias ticketee='cd ~/code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
+alias be='bundle exec'
+alias ervm='mate -l 439 ~/.rvm/scripts/selector'
+alias rup='echo "Executing: rvm get latest";rvm get latest;rvm reload'
+alias bup='echo "Executing: brew update";brew update'
+alias bout='echo "Executing: brew outdated";brew outdated'
 
 # Search
 # Use ack for grepping and find if ack is available

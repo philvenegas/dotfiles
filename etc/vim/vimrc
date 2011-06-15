@@ -7,7 +7,7 @@
 " |                                                                           |
 " | Some highlights:                                                          |
 " |   jj = <esc>  Very useful for keeping your hands on the home row          |
-" |   Command ] = toggle NERDTree off and on                                         |
+" |   Command ] = toggle NERDTree off and on                                  |
 " |                                                                           |
 " |   ,f = fuzzy find all files                                               |
 " |   ,b = fuzzy find in all buffers                                          |
@@ -69,6 +69,7 @@ set si " smartindent (local to buffer)
 " Scrollbars ******************************************************************
 set sidescrolloff=2
 set numberwidth=4
+set sidescrolloff=10
 
 
 " Windows *********************************************************************
@@ -81,8 +82,8 @@ set splitbelow splitright
 
 
 " Cursor highlights ***********************************************************
+set cursorcolumn
 set cursorline
-"set cursorcolumn
 
 
 " Searching *******************************************************************
@@ -93,6 +94,7 @@ set smartcase " Ignore case when searching lowercase
 
 
 " Colors **********************************************************************
+" http://www.vi-improved.org/colors.php
 "set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
@@ -104,6 +106,20 @@ set showcmd
 set ruler " Show ruler
 "set ch=2 " Make command line two lines high
 "match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
+
+" https://wincent.com/wiki/Set_the_Vim_statusline
+" http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
+" set statusline=%t       "tail of the filename
+" set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+" set statusline+=%{&ff}] "file format
+" set statusline+=%h      "help file flag
+" set statusline+=%m      "modified flag
+" set statusline+=%r      "read only flag
+" set statusline+=%y      "filetype
+" set statusline+=%=      "left/right separator
+" set statusline+=%c,     "cursor column
+" set statusline+=%l/%L   "cursor line/total lines
+" set statusline+=\ %P    "percent through file
 
 
 " Line Wrapping ***************************************************************
@@ -141,6 +157,12 @@ nmap <Leader>ev :tabedit $MYVIMRC<CR>
 " Faster shortcut for commenting. Requires T-Comment plugin
 " map <Leader>c <c-_><c-_>
 map <D-/> <c-_><c-_>
+
+" switch between in screen windows
+nmap <Space> <C-w><C-w>
+
+" remove search highlighted words
+nmap <silent> <C-n> :silent noh<CR>
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
@@ -216,6 +238,9 @@ imap aa @
 :map <D-]> :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
 let NERDTreeMouseMode=1 " Single click for everything
+
+" let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1 
 
 
 " NERD Commenter **************************************************************
