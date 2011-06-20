@@ -46,7 +46,7 @@ export COLOR_GRAY='\033[1;30m'
 export COLOR_LIGHT_GRAY='\033[0;37m'
 # export COLOR_BACKGROUND="\033[1;30;40m"
 
-  export BGK="\[\033[40m\]"
+  export BGK="\033[40m"
   # local BGR="\[\033[41m\]"
   # local BGG="\[\033[42m\]"
   # local BGY="\[\033[43m\]"
@@ -288,8 +288,9 @@ alias box='cd ~/Dropbox'
 alias be='bundle exec'
 alias ervm='mate -l 439 ~/.rvm/scripts/selector'
 alias rup='echo "Executing: rvm get latest";rvm get latest;rvm reload'
-alias bup='echo "Executing: brew update";brew update'
-alias bout='echo "Executing: brew outdated";brew outdated'
+alias upbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew update${COLOR_NC}\n";brew update'
+alias outbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew outdated${COLOR_NC}\n";brew outdated'
+alias ssd='echo -e "Executing: ${COLOR_GREEN}${BGK}script/server --debugger${COLOR_NC}\n";script/server --debugger'
 
 # Search
 # Use ack for grepping and find if ack is available
