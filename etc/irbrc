@@ -1,3 +1,5 @@
+# http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs/page/2
+
 # Awesome IRB (mod'd) file from http://github.com/logankoester/irbrc
 # Setup:
 # sudo gem install wirble what_methods
@@ -7,7 +9,7 @@ require 'rubygems'
  
 # Dr Nic's gem inspired by
 # http://redhanded.hobix.com/inspect/stickItInYourIrbrcMethodfinder.html
-require 'what_methods'
+# require 'what_methods'
  
 # Pretty Print method
 require 'pp'
@@ -32,11 +34,20 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 # Wirble is a set of enhancements for irb
 # http://pablotron.org/software/wirble/README
 # Implies require 'pp', 'irb/completion', and 'rubygems'
-require 'wirble'
-Wirble.init
- 
-# Enable colored output
-Wirble.colorize
+# require 'wirble'
+# Wirble.init
+#  
+# # Enable colored output
+# Wirble.colorize
+
+# begin
+#   require 'wirble'
+#   # init wirble
+#   Wirble.init
+#   Wirble.colorize
+# rescue LoadError => err
+#   $stderr.puts "Couldn't load Wirble: #{err}"
+# end
  
 # Clear the screen
 def clear
@@ -95,3 +106,12 @@ end
 # http://sketches.rubyforge.org/
 # require 'sketches'
 # Sketches.config :editor => 'mvim'
+
+if ENV['RAILS_ENV']
+  # Called after the irb session is initialized and Rails has been loaded
+   IRB.conf[:IRB_RC] = Proc.new do
+       logger = Logger.new(STDOUT)
+       ActiveRecord::Base.logger = logger
+       ActiveResource::Base.logger = logger
+   end
+end
