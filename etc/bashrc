@@ -292,6 +292,7 @@ alias upbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew update${COLOR_NC}\n";
 alias outbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew outdated${COLOR_NC}\n";brew outdated'
 alias ssd='echo -e "Executing: ${COLOR_GREEN}${BGK}script/server --debugger${COLOR_NC}\n";script/server --debugger'
 alias iphone_sim='/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/Contents/MacOS/iPhone\ Simulator'
+alias rmall='cd ss; rm public/stylesheets/all.css; rm public/javascripts/all.js'
 
 # Search
 # Use ack for grepping and find if ack is available
