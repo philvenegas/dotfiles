@@ -293,7 +293,7 @@ alias outbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew outdated${COLOR_NC}\
 alias ssd='echo -e "Executing: ${COLOR_GREEN}${BGK}script/server --debugger${COLOR_NC}\n";script/server --debugger'
 alias iphone_sim='/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/Contents/MacOS/iPhone\ Simulator'
 alias rmall='cd ss; rm public/stylesheets/all.css; rm public/javascripts/all.js'
-
+alias mobile_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-udd-profiles --user-data-dir="/Users/fvenegas/Library/Application Support/Google/Mobile" --args -user-agent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5" > /dev/null 2>&1 &'
 # Search
 # Use ack for grepping and find if ack is available
 # sudo port install p5-app-ack
