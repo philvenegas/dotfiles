@@ -41,7 +41,7 @@ echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 echo
-rvm use 1.9.2
+rvm use 1.9.3
 
 # Notes: ----------------------------------------------------------
 # When you start an interactive shell (log in, open terminal or iTerm in OS X, 
@@ -57,3 +57,9 @@ rvm use 1.9.2
 # in this order:
 #     bashrc
 #     .bashrc
+
+# export PATH=/Users/fvenegas/code/sencha-2:$PATH
+# 
+# export PATH=/Users/fvenegas/code/sencha-2/command:$PATH
+# 
+# export PATH=/Users/fvenegas/code/sencha-2/jsbuilder:$PATH
