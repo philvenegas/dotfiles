@@ -14,7 +14,8 @@ if [ "$OS" = "darwin" ] ; then
   export NODE_PATH=/usr/local/lib/node
   export MYSQL_BIN=/usr/local/mysql/bin
   export RVM_BIN=$HOME/.rvm/bin
-  export PATH=$MYSQL_BIN:$RVM_BIN:$PATH
+  export SS_BIN=$HOME/code/serviceseeking/bin
+  export PATH=$MYSQL_BIN:$RVM_BIN:$SS_BIN:$PATH
   # https://github.com/cucumber/cucumber/wiki/Console-Colours
   export CUCUMBER_COLORS=passed=on_black,green:passed_param=green,bold,underline
 fi
