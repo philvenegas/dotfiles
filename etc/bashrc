@@ -283,16 +283,19 @@ alias lla='ls -lah'
 alias wget="curl -O"
 alias tower='gittower'
 alias code='cd ~/code'
-alias ticketee='cd ~/code/philvenegas/ticketee'
+# alias ticketee='cd ~/code/philvenegas/ticketee'
 alias box='cd ~/Dropbox'
 alias be='bundle exec'
-alias bec='bundle exec cucumber'
-alias ervm='mate -l 454 ~/.rvm/scripts/selector'
-alias rup='echo "Executing: ${COLOR_GREEN}${BGK}rvm get head${COLOR_NC}\n";rvm get head;rvm reload'
+alias bec='echo -e "Executing: ${COLOR_GREEN}${BGK}time bundle exec cucumber${COLOR_NC}\n"; time bundle exec cucumber'
+alias testlogs='cd ss;tail -f log/test.log'
+alias devlogs='cd ss;tail -f log/development.log'
+alias console='echo -e "Executing: ${COLOR_GREEN}${BGK}bundle exec rails console${COLOR_NC}\n"; bundle exec rails console'
+# alias ervm='mate -l 454 ~/.rvm/scripts/selector'
+alias rup='echo -e "Executing: ${COLOR_GREEN}${BGK}rvm get latest\nrvm reload${COLOR_NC}\n"; rvm get latest;rvm reload'
 alias upbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew update${COLOR_NC}\n";brew update'
 alias outbrew='echo -e "Executing: ${COLOR_GREEN}${BGK}brew outdated${COLOR_NC}\n";brew outdated'
 alias ssd='echo -e "Executing: ${COLOR_GREEN}${BGK}script/server --debugger${COLOR_NC}\n";script/server --debugger'
-alias rsd='echo -e "Executing: ${COLOR_GREEN}${BGK}rails server --debugger${COLOR_NC}\n";bundle exec rails server --debugger'
+alias rsd='echo -e "Executing: ${COLOR_GREEN}${BGK}bundle exec rails server --debugger${COLOR_NC}\n";bundle exec rails server --debugger'
 # alias iphone_sim='/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/Contents/MacOS/iPhone\ Simulator'
 alias rmall='cd ss; rm public/stylesheets/all.css; rm public/javascripts/all.js'
 alias mobile_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-udd-profiles --user-data-dir="/Users/fvenegas/Library/Application Support/Google/Mobile" --args -user-agent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5" > /dev/null 2>&1 &'
@@ -369,10 +372,10 @@ if [ -f ~/.bashrc_local ]; then
   source ~/.bashrc_local
 fi
 
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=500000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=50000000
+# export RUBY_HEAP_MIN_SLOTS=1000000
+# export RUBY_HEAP_SLOTS_INCREMENT=500000
+# export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+# export RUBY_GC_MALLOC_LIMIT=50000000
 
 # Test ------------------------------------------------------------------------
 
