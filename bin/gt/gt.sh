@@ -1,5 +1,5 @@
 # git ------------------------------------------------
-alias gtshowcommands="echo -e '${COLOR_LIGHT_PURPLE}Available commands: 
+alias gtshowcommands="echo -e '${COLOR_LIGHT_PURPLE}Available commands:
    ${COLOR_BLUE}gt
    ${COLOR_BLUE}gt${COLOR_NC}init
    ${COLOR_BLUE}gt${COLOR_NC}commit    ${COLOR_GRAY}Example: gtcommit \"Your message here\"
@@ -16,8 +16,8 @@ alias gtshowcommands="echo -e '${COLOR_LIGHT_PURPLE}Available commands:
    ${COLOR_BLUE}gt${COLOR_NC}push
    ${COLOR_BLUE}gt${COLOR_NC}pull
    ${COLOR_BLUE}gt${COLOR_NC}fetch
-   ${COLOR_BLUE}gt${COLOR_NC}checkout  ${COLOR_GRAY}(switch branch or revert) Example: gtcheckout your_file or gtcheckout your_local_branch  
-   ${COLOR_BLUE}gt${COLOR_NC}checkout${COLOR_BLUE}tracking${COLOR_NC}branch${COLOR_NC}  ${COLOR_GRAY}Example: gtcheckouttrackingbranch your_branch  
+   ${COLOR_BLUE}gt${COLOR_NC}checkout  ${COLOR_GRAY}(switch branch or revert) Example: gtcheckout your_file or gtcheckout your_local_branch
+   ${COLOR_BLUE}gt${COLOR_NC}checkout${COLOR_BLUE}tracking${COLOR_NC}branch${COLOR_NC}  ${COLOR_GRAY}Example: gtcheckouttrackingbranch your_branch
    ${COLOR_BLUE}gt${COLOR_NC}blame
    ${COLOR_BLUE}gt${COLOR_NC}log
    ${COLOR_BLUE}gt${COLOR_NC}log${COLOR_BLUE}short${COLOR_NC}
@@ -86,7 +86,8 @@ gtcheckouttrackingbranch (){
   gt checkout -tlb $1 origin/$1
 }
 
-alias gtlog='gt log --name-status'
+# alias gtlog='gt log --name-status'
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gtlogshort='gt log --pretty=oneline'
 alias gtloggraph='gt log --graph'
 gtlogforuser(){
