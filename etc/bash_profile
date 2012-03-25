@@ -11,7 +11,7 @@ export PLATFORM="$MACHINE-$OS-$OSVERSION"
 if [ "$OS" = "darwin" ] ; then
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts and MySQL installed
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts installed
-  export NODE_PATH=/usr/local/lib/node
+  export NODE_PATH=/usr/local/lib/node_modules
   export MYSQL_BIN=/usr/local/mysql/bin
   export POW_BIN='$HOME/Library/Application Support/Pow/Current/bin'
   export RVM_BIN=$HOME/.rvm/bin
@@ -42,7 +42,7 @@ echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 echo
-rvm use 1.9.3
+rvm use ree
 
 # Notes: ----------------------------------------------------------
 # When you start an interactive shell (log in, open terminal or iTerm in OS X,
