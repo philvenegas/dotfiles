@@ -285,6 +285,7 @@ alias tower='gittower'
 alias code='cd ~/code'
 alias box='cd ~/Dropbox'
 alias be='bundle exec'
+alias ber='bundle exec rake'
 alias bec='echo -e "Executing: ${COLOR_GREEN}${BGK}time bundle exec cucumber${COLOR_NC}\n"; time bundle exec cucumber'
 alias testlogs='tail -f log/test.log'
 alias devlogs='tail -f log/development.log'
@@ -303,6 +304,8 @@ alias mobile_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Ch
 alias iphone_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-udd-profiles --user-data-dir="/Users/fvenegas/Library/Application Support/Google/Iphone" --args -user-agent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5" > /dev/null 2>&1 &'
 alias vi='mate'
 alias rcache='echo -e "Executing: ${COLOR_GREEN}${BGK}./script/rails runner "Rails.cache.clear"${COLOR_NC}\n";./script/rails runner "Rails.cache.clear"'
+
+alias daily='npm update -g; rvm get stable; upbrew; outbrew';
 
 # https://raw.github.com/mathiasbynens/dotfiles/master/.aliases
 
