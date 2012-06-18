@@ -307,6 +307,8 @@ alias rcache='echo -e "Executing: ${COLOR_GREEN}${BGK}./script/rails runner "Rai
 
 alias daily='npm update -g; rvm get stable; upbrew; outbrew';
 
+alias hb='cd ss; handlebars app/views/mobile/templates/leads_list.handlebars -f public/javascripts/mobile/hbs/leads_list.js -m; handlebars app/views/mobile/templates/jobs_list.handlebars  -f public/javascripts/mobile/hbs/jobs_list.js -m'
+
 # https://raw.github.com/mathiasbynens/dotfiles/master/.aliases
 
 
