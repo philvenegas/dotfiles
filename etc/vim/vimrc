@@ -235,16 +235,16 @@ imap aa @
 
 " NERDTree ********************************************************************
 " :noremap <Leader>d :NERDTreeToggle<CR>
-:map <D-]> :NERDTreeToggle<CR>
-let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
-let NERDTreeMouseMode=1 " Single click for everything
+" :map <D-]> :NERDTreeToggle<CR>
+" let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
+" let NERDTreeMouseMode=1 " Single click for everything
 
 " let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1 
+" let NERDTreeDirArrows=1 
 
 
 " NERD Commenter **************************************************************
-let NERDCreateDefaultMappings=0 " I turn this off to make it simple
+" let NERDCreateDefaultMappings=0 " I turn this off to make it simple
 
 " Toggle commenting on 1 line or all selected lines. Wether to comment or not
 " is decided based on the first line; if it's not commented then all lines

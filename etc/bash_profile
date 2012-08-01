@@ -14,11 +14,11 @@ if [ "$OS" = "darwin" ] ; then
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts installed
   export NODE_PATH=/usr/local/lib/node_modules
   # export MYSQL_BIN=/usr/local/mysql/bin
-  export POW_BIN='~/Library/Application\ Support/Pow/Current/bin'
+  # export POW_BIN='~/Library/Application\ Support/Pow/Current/bin'
   export RVM_BIN=$HOME/.rvm/bin
-  export PATH=$POW_BIN:$RVM_BIN:$PATH
+  export PATH=$RVM_BIN:$PATH
   # https://github.com/cucumber/cucumber/wiki/Console-Colours
-  export CUCUMBER_COLORS=passed=on_black,green:passed_param=green,bold,underline
+  # export CUCUMBER_COLORS=passed=on_black,green:passed_param=green,bold,underline
 fi
 
 # if [ -d ~/bin ]; then
@@ -43,7 +43,7 @@ echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 echo
-rvm use ruby-1.9.3-p194
+rvm use ruby-1.9.3
 cd ss
 
 # Notes: ----------------------------------------------------------
