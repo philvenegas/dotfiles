@@ -124,6 +124,7 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   # git completion > brew install git
   # source ~/code/dotfiles/bin/git-completion.bash
   source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+  source /usr/local/share/git-core/contrib/completion/git-prompt.sh
 
   # Add completion to source and .
   complete -F _command source
@@ -218,7 +219,7 @@ fi
 alias show='cat ~/.dirs'
 save (){
   command sed "/!$/d" ~/.dirs > ~/.dirs1; \mv ~/.dirs1 ~/.dirs; echo "$@"=\"`pwd`\" >> ~/.dirs; source ~/.dirs ;
-}  #"
+}
 source ~/.dirs  # Initialization for the above 'save' facility: source the .sdirs file
 shopt -s cdable_vars # set the bash option so that no '$' is required when using the above facility
 
@@ -304,8 +305,11 @@ alias mobile_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Ch
 alias iphone_browser='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-udd-profiles --user-data-dir="/Users/fvenegas/Library/Application Support/Google/Iphone" --args -user-agent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5" > /dev/null 2>&1 &'
 alias vi='mate'
 alias rcache='echo -e "Executing: ${COLOR_GREEN}${BGK}./script/rails runner "Rails.cache.clear"${COLOR_NC}\n";./script/rails runner "Rails.cache.clear"'
+
 alias daily='npm update -g; rvm get stable; upbrew; outbrew'
+
 alias ttr='touch tmp/restart.txt'
+alias ctags='brew --prefix`/bin/ctags'
 
 
 # https://raw.github.com/mathiasbynens/dotfiles/master/.aliases
