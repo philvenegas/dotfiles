@@ -311,7 +311,7 @@ alias daily='npm update -g; rvm get stable; upbrew; outbrew'
 alias ttr='touch tmp/restart.txt'
 alias ctags='brew --prefix`/bin/ctags'
 
-alias debug='cd ss; be rdebug -c -p 20559'
+alias debug='cd ss; be rdebug -c -p 8989'
 
 # https://raw.github.com/mathiasbynens/dotfiles/master/.aliases
 
