@@ -124,7 +124,8 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   # git completion > brew install git
   # source ~/code/dotfiles/bin/git-completion.bash
   source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-  source /usr/local/share/git-core/contrib/completion/git-prompt.sh
+  # cd /usr/local/share/git-core/contrib/; ln -sf /usr/local/Cellar/git/1.7.12.1/etc/bash_completion.d/git-prompt.sh git-prompt.sh
+  source /usr/local/share/git-core/contrib/git-prompt.sh
 
   # Add completion to source and .
   complete -F _command source
@@ -156,14 +157,9 @@ prompt="${TITLEBAR}${BGK}
 \[${COLOR_WHITE}\] \
 \w\
 \[${COLOR_LIGHT_CYAN}\]${BGK}\
-"'$(__git_ps1 "[%s]")'"\
-\[${COLOR_GRAY}\] \
-@\
-\[${COLOR_YELLOW}\]${BGK} \
-\h\
-\[${COLOR_GRAY}\] \
-(\u) -\
-\[${COLOR_WHITE}\] \
+"'$(__git_ps1 "(%s)")'"\
+\[${COLOR_GRAY}\] - \
+\[${COLOR_WHITE}\]\
 \@\
 \[${COLOR_LIGHT_GREEN}\]${BGK} \
 "'$(~/.rvm/bin/rvm-prompt)'"\
