@@ -154,12 +154,12 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
         #prompt="\[\033]0;${USER} ${PWD}\007\]\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
 
 prompt="${TITLEBAR}${BGK}
+\[${COLOR_RED}\]\h \
 \[${COLOR_WHITE}\] \
 \w\
 \[${COLOR_LIGHT_CYAN}\]${BGK}\
 "'$(__git_ps1 "(%s)")'"\
-\[${COLOR_GRAY}\] - \
-\[${COLOR_WHITE}\]\
+\[${COLOR_WHITE}\] \
 \@\
 \[${COLOR_LIGHT_GREEN}\]${BGK} \
 "'$(~/.rvm/bin/rvm-prompt)'"\
@@ -172,10 +172,10 @@ prompt="${TITLEBAR}${BGK}
       if test $previous_return_value -eq 0
       then
           # PS1="${prompt}> "
-          PS1="${prompt}\n\[${COLOR_WHITE}\] > \[${COLOR_NC}\]"
+          PS1="${prompt}\n\[${COLOR_WHITE}\]⚡  \[${COLOR_NC}\]"
       else
           # PS1="${prompt}\[${COLOR_RED}\]> \[${COLOR_NC}\]"
-          PS1="${prompt}\n\[${COLOR_WHITE}\] > \[${COLOR_NC}\]"
+          PS1="${prompt}\n\[${COLOR_WHITE}\]⚡  \[${COLOR_NC}\]"
       fi
   }
   PROMPT_COMMAND=prompt_func
