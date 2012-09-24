@@ -153,16 +153,16 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
       else
         #prompt="\[\033]0;${USER} ${PWD}\007\]\[${COLOR_GREEN}\]\w\[${COLOR_GRAY}\]$(__git_ps1)\[${COLOR_NC}\] "
 
-prompt="${TITLEBAR}${BGK}
-\[${COLOR_RED}\]\h \
+prompt="${TITLEBAR}
+\[${COLOR_RED}\]${BGK} \h \
 \[${COLOR_WHITE}\] \
 \w\
-\[${COLOR_LIGHT_CYAN}\]${BGK}\
+\[${COLOR_LIGHT_CYAN}\]\
 "'$(__git_ps1 "(%s)")'"\
 \[${COLOR_WHITE}\] \
 \@\
-\[${COLOR_LIGHT_GREEN}\]${BGK} \
-"'$(~/.rvm/bin/rvm-prompt)'"\
+\[${COLOR_LIGHT_GREEN}\] \
+"'$(~/.rvm/bin/rvm-prompt)'" \
 \[${COLOR_NC}\]"
 
       fi
