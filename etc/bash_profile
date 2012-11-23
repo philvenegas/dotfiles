@@ -31,6 +31,7 @@ fi
 
 # Load in .bashrc -------------------------------------------------
 source ~/.bashrc
+source "`brew --prefix`/etc/grc.bashrc"
 
 # Hello Messsage --------------------------------------------------
 echo
@@ -44,7 +45,7 @@ echo -ne "${COLOR_GREEN}Server time is: ${COLOR_NC}"; date
 
 echo
 rvm use ruby-1.9.3
-cd ss
+cd ; cd ss
 
 # Notes: ----------------------------------------------------------
 # When you start an interactive shell (log in, open terminal or iTerm in OS X,
