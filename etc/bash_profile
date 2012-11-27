@@ -6,7 +6,7 @@ export OSVERSION=`uname -r`; OSVERSION=`expr "$OSVERSION" : '[^0-9]*\([0-9]*\.[0
 export MACHINE=`uname -m | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
 export PLATFORM="$MACHINE-$OS-$OSVERSION"
 # Note, default OS is assumed to be OSX
-export RAILS_ENV='development'
+#export RAILS_ENV='development'
 
 # Path ------------------------------------------------------------
 if [ "$OS" = "darwin" ] ; then

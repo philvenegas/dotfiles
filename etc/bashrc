@@ -328,9 +328,11 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias applog="grc powder applog"
+
 # https://raw.github.com/mathiasbynens/dotfiles/master/.aliases
 
 # remove duplicate apps in menus
+
 # /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user
 # then relaunch Finder
 
