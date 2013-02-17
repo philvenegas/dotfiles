@@ -124,8 +124,8 @@ if [ $IS_INTERACTIVE = 'true' ] ; then # Interactive shell only
   # git completion > brew install git
   # source ~/code/dotfiles/bin/git-completion.bash
   source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-  # cd /usr/local/share/git-core/contrib/; ln -sf /usr/local/Cellar/git/1.7.12.1/etc/bash_completion.d/git-prompt.sh git-prompt.sh
-  source /usr/local/share/git-core/contrib/git-prompt.sh
+  # cd /usr/local/share/git-core/contrib/; ln -sf /usr/local/share/git-core/contrib/git-prompt.sh git-prompt.sh
+  source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 
   # Add completion to source and .
   complete -F _command source

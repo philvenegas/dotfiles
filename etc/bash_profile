@@ -12,11 +12,12 @@ export PLATFORM="$MACHINE-$OS-$OSVERSION"
 if [ "$OS" = "darwin" ] ; then
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts and MySQL installed
   #export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # OS-X Specific, with MacPorts installed
-  export NODE_PATH=/usr/local/lib/node_modules
+  # export NODE_PATH=/usr/local/lib/node_modules
+  export NODE_BIN=/usr/local/share/npm/bin
   # export MYSQL_BIN=/usr/local/mysql/bin
   # export POW_BIN='~/Library/Application\ Support/Pow/Current/bin'
   export RVM_BIN=$HOME/.rvm/bin
-  export PATH=$RVM_BIN:$PATH
+  export PATH=$RVM_BIN:$NODE_BIN:$PATH
   # https://github.com/cucumber/cucumber/wiki/Console-Colours
   # export CUCUMBER_COLORS=passed=on_black,green:passed_param=green,bold,underline
 fi
